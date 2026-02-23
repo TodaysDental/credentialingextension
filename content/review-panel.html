@@ -1,0 +1,81 @@
+<!-- TodaysDental Credentialing Review Panel Template -->
+<!-- This file is injected into portal pages as part of the autofill review UI -->
+<div id="td-review-panel" class="td-credentialing-panel">
+    <!-- Header -->
+    <div class="td-panel-header">
+        <div class="td-panel-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 11l3 3L22 4"></path>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+            <span>Review & Autofill</span>
+        </div>
+        <button class="td-panel-close" id="td-close-panel">&times;</button>
+    </div>
+
+    <!-- Content -->
+    <div class="td-panel-content">
+        <!-- Provider Section -->
+        <div class="td-panel-section" id="td-provider-section">
+            <div class="td-section-header">
+                <span class="td-section-icon">👤</span>
+                <span class="td-section-title">Provider</span>
+            </div>
+            <div class="td-provider-card" id="td-provider-card">
+                <div class="td-provider-name" id="td-provider-name">Select a provider</div>
+                <div class="td-provider-npi" id="td-provider-npi">NPI: —</div>
+            </div>
+        </div>
+
+        <!-- Portal Section -->
+        <div class="td-panel-section" id="td-portal-section">
+            <div class="td-section-header">
+                <span class="td-section-icon">🏥</span>
+                <span class="td-section-title">Portal Detected</span>
+            </div>
+            <div class="td-portal-info" id="td-portal-info">
+                <span class="td-portal-name" id="td-portal-name">Unknown Portal</span>
+                <span class="td-portal-tier" id="td-portal-tier"></span>
+            </div>
+        </div>
+
+        <!-- Fields Found Section -->
+        <div class="td-panel-section" id="td-fields-section">
+            <div class="td-section-header">
+                <span class="td-section-icon">📝</span>
+                <span class="td-section-title">Fields Found</span>
+                <span class="td-badge td-badge-ready" id="td-fields-count">0</span>
+            </div>
+            <div class="td-fields-preview" id="td-fields-preview">
+                <!-- Fields will be dynamically added here -->
+                <div class="td-field-item">
+                    <span class="td-field-label">Scanning page...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Section -->
+        <div class="td-panel-section" id="td-status-section">
+            <div class="td-status-message" id="td-status-message">
+                Ready to autofill
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="td-panel-footer">
+        <button class="td-btn td-btn-secondary" id="td-preview-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            Preview
+        </button>
+        <button class="td-btn td-btn-primary" id="td-fill-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 11l3 3L22 4"></path>
+            </svg>
+            Fill All Fields
+        </button>
+    </div>
+</div>
